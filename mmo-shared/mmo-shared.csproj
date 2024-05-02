@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CB84CF35-5080-46A8-81EB-5638AD8AD402}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>mmo_shared</RootNamespace>
+    <AssemblyName>mmo-shared</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Containers\Skill.cs" />
+    <Compile Include="DataStore\ClassData.cs" />
+    <Compile Include="DataStore\SkillData.cs" />
+    <Compile Include="DataStore\ZoneData.cs" />
+    <Compile Include="Messages\Client\AutoAttack.cs" />
+    <Compile Include="Messages\Client\ClientChatMessage.cs" />
+    <Compile Include="Messages\Client\ClientRespawn.cs" />
+    <Compile Include="Messages\Client\GetSurroundings.cs" />
+    <Compile Include="Messages\Client\GroundTargetSkill.cs" />
+    <Compile Include="Messages\Client\NoTargetSkill.cs" />
+    <Compile Include="Messages\Client\UnitTargetSkill.cs" />
+    <Compile Include="Messages\Server\InterruptAttack.cs" />
+    <Compile Include="Messages\Server\ServerGroundTargetSkill.cs" />
+    <Compile Include="Messages\Server\ServerNoTargetSkill.cs" />
+    <Compile Include="Messages\Server\ServerUnitTargetSkill.cs" />
+    <Compile Include="Messages\Server\UnitRevive.cs" />
+    <Compile Include="Serialization\OrderAttribute.cs" />
+    <Compile Include="Containers\Vector2.cs" />
+    <Compile Include="Messages\Client\Alive.cs" />
+    <Compile Include="Messages\Client\ClientDisconnect.cs" />
+    <Compile Include="MessageTypeList\ClientMessages.cs" />
+    <Compile Include="Messages\Client\CreateCharacter.cs" />
+    <Compile Include="Messages\Client\Login.cs" />
+    <Compile Include="Messages\Client\LoginCharacter.cs" />
+    <Compile Include="Messages\Client\MoveCommand.cs" />
+    <Compile Include="Messages\Client\Registration.cs" />
+    <Compile Include="Messages\Client\SessionIdRequest.cs" />
+    <Compile Include="Messages\Base\Message.cs" />
+    <Compile Include="Serialization\MessageRepository.cs" />
+    <Compile Include="Serialization\Serializer.cs" />
+    <Compile Include="Messages\Server\CharInfo.cs" />
+    <Compile Include="Messages\Server\CharSelectInfo.cs" />
+    <Compile Include="Messages\Server\CharSlotInfo.cs" />
+    <Compile Include="Messages\Server\CreateCharacterResponse.cs" />
+    <Compile Include="Messages\Server\HealthChange.cs" />
+    <Compile Include="Messages\Server\LoginCharacterResponse.cs" />
+    <Compile Include="Messages\Server\LoginResponse.cs" />
+    <Compile Include="Messages\Server\PositionUpdate.cs" />
+    <Compile Include="Messages\Server\RegistrationResponse.cs" />
+    <Compile Include="Messages\Server\ServerAutoAttack.cs" />
+    <Compile Include="Messages\Server\ServerChatMessage.cs" />
+    <Compile Include="Messages\Server\ServerDisconnect.cs" />
+    <Compile Include="MessageTypeList\ServerMessages.cs" />
+    <Compile Include="Messages\Server\SessionStart.cs" />
+    <Compile Include="Messages\Server\UnitDie.cs" />
+    <Compile Include="Messages\Base\Transmission.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy $(TargetPath) C:\stuff\projects\unity\mmo\Assets\Imports</PostBuildEvent>
+  </PropertyGroup>
+</Project>

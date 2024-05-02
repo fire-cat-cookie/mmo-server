@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2009
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mmo-server", "mmo-server\mmo-server.csproj", "{46286195-9A91-4FCA-8EF7-68109E128462}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mmo-shared", "mmo-shared\mmo-shared.csproj", "{CB84CF35-5080-46A8-81EB-5638AD8AD402}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46286195-9A91-4FCA-8EF7-68109E128462}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46286195-9A91-4FCA-8EF7-68109E128462}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46286195-9A91-4FCA-8EF7-68109E128462}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46286195-9A91-4FCA-8EF7-68109E128462}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB84CF35-5080-46A8-81EB-5638AD8AD402}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{CB84CF35-5080-46A8-81EB-5638AD8AD402}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{CB84CF35-5080-46A8-81EB-5638AD8AD402}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB84CF35-5080-46A8-81EB-5638AD8AD402}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DFA140C2-2557-4CDB-AA68-B9D188C288C5}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
